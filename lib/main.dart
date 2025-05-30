@@ -1,25 +1,26 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MeuApp());
+  runApp(MeuApp()); // Função principal que executa o aplicativo, chamando o widget MeuApp
 }
 
 class MeuApp extends StatelessWidget {
-  const MeuApp({super.key});
+  const MeuApp({super.key});  // Construtor da classe MeuApp, que é um widget sem estado
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.blueGrey,
+        backgroundColor: Colors.blueGrey, // Cor de fundo da tela
         body: SafeArea(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               CircleAvatar(
-                backgroundImage: AssetImage('imagens/stela.jpg'),
+                backgroundImage: AssetImage('imagens/stela.jpg'), // Imagem de perfil 
                 radius: 50.0,
               ),
+              // Informações sobre o texto
               Text(
                 'Stela Rocha',
                 style: TextStyle(
@@ -42,13 +43,13 @@ class MeuApp extends StatelessWidget {
               SizedBox(
                 height: 20.0,
                 width: 250.0,
-                child: Divider(color: Color(0xFFB2EBF2)),
+                child: Divider(color: Color(0xFFB2EBF2)), // Linha divisória com altura e cor definida
               ),
               Card(
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
                 child: ListTile(
                   leading: Icon(
-                    Icons.phone,
+                    Icons.phone, // Ícone de telefone
                     size: 25.0,
                     color: Colors.blueGrey,
                   ),
@@ -65,7 +66,7 @@ class MeuApp extends StatelessWidget {
               Card(
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
                 child: ListTile(
-                  leading: Icon(Icons.mail, size: 25.0, color: Colors.blueGrey),
+                  leading: Icon(Icons.mail, size: 25.0, color: Colors.blueGrey),  // Ícone de e-mail
                   title: Text(
                     'stela@gmail.com',
                     style: TextStyle(
